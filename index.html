@@ -2,9 +2,236 @@
 <html>
 <meta charset="utf-8">
 <head>
-    <title>seungman's page</title>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WB88SKB');</script>
+  <!-- End Google Tag Manager -->
+
+    <title>seungman's page   스트립트 테스트</title>
+
+    <meta charset="UTF-8">
+  		  		<style>
+  			body{padding:20px; margin:0;}
+  			h1{font-size:1em;}
+  			ul li{list-style:none;}
+  			.a_wrapper{border:1px solid #eee;}
+  			.tab:after{content:""; display:block; clear:both;}
+  			.tab li{
+  				float:left;
+  				width:100px;
+  				height:50px;
+  				line-height:50px;
+  				background:#eee;
+  				text-align:center;
+  				margin-right:10px;
+  			}
+
+  			.tab01_contents{
+  				margin:30px;
+  				border:1px dotted #ccc;
+  				padding:20px;
+  				display:none;
+  			}
+  			.stab:after{content:""; display:block; clear:both;}
+  			.stab li{
+  				float:left;
+  				width:130px;
+  				height:50px;
+  				line-height:50px;
+  				background:#eee;
+  				text-align:center;
+  				margin-right:10px;
+  			}
+
+  			.sTabArea{
+  				display:none;
+  			}
+
+  			/* with script */
+  			.a_wrapper[data-view="A"] .aType,
+  			.a_wrapper[data-view="B"] .bType{
+  				display:block;
+  			}
+
+  			.a_wrapper[data-view="A"] li[data-category="A"],
+  			.a_wrapper[data-view="B"] li[data-category="B"]{
+  				background : #ddd;
+  			}
+
+  			.a_wrapper .aType[data-view="AA"] .stabA,
+  			.a_wrapper .aType[data-view="BB"] .stabB,
+  			.a_wrapper .aType[data-view="CC"] .stabC{
+  				display:block;
+  			}
+
+  			.a_wrapper .aType[data-view="AA"] li[data-category="AA"],
+  			.a_wrapper .aType[data-view="BB"] li[data-category="BB"],
+  			.a_wrapper .aType[data-view="CC"] li[data-category="CC"]{
+  				background : #ddd;
+  			}
+
+  		</style>
+
+
 </head>
-  <body>
-    <h1>This page is seungman's github page</h1>
-  </body>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB88SKB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <h1>data set 설정으로 탭 스크립트를 간단하게 구현하는 방법</h1>
+
+  <!-- 전체 섹션 -->
+  <section class="a_wrapper" id="tab_component1" data-view="A" data-product="prd0" data-index="0">
+    <h2>탭 선택</h2>
+    <div>
+      <ul class="tab">
+        <li data-category="A"><a href="">탭선택 01</a></li>
+        <li data-category="B"><a href="">탭선택 02</a></li>
+      </ul>
+    </div>
+
+
+    <!-- A contents -->
+    <section id="stab_component" class="tab01_contents aType" data-view="AA">
+      <ul class="stab">
+        <li data-category="AA"><a href="">작은탭 선택01</a></li>
+        <li data-category="BB"><a href="">작은탭 선택02</a></li>
+        <li data-category="CC"><a href="">작은탭 선택03</a></li>
+      </ul>
+      <div class="sTabArea stabA">
+        <h2>탭 컨텐츠 001</h2>
+        <ul>
+          <li>내용이 들어가겠지욤</li>
+          <li>내용이 들어가겠지욤</li>
+          <li>내용이 들어가겠지욤</li>
+          <li>내용이 들어가겠지욤</li>
+        </ul>
+      </div>
+
+
+      <!-- s : 탭 01-->
+      <div class="sTabArea stabB">
+        <h2>탭 컨텐츠 002</h2>
+        <ul>
+          <li>내용이 들어가겠지욤</li>
+          <li>내용이 들어가겠지욤</li>
+          <li>내용이 들어가겠지욤</li>
+          <li>내용이 들어가겠지욤</li>
+        </ul>
+      </div>
+
+      <!-- s : 탭 01-->
+      <div class="sTabArea stabC">
+        <h2>탭 컨텐츠 003</h2>
+        <ul>
+          <li>내용이 들어가겠지욤</li>
+          <li>내용이 들어가겠지욤</li>
+          <li>내용이 들어가겠지욤</li>
+          <li>내용이 들어가겠지욤</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- B contents -->
+    <section class="tab01_contents bType">
+      <h2>탭 컨텐츠 02</h2>
+      <ul>
+        <li>두번째 컨텐츠 내용이 들어가겠지욤</li>
+        <li>두번째 컨텐츠 내용이 들어가겠지욤</li>
+        <li>두번째 컨텐츠 내용이 들어가겠지욤</li>
+        <li>두번째 컨텐츠 내용이 들어가겠지욤</li>
+        <li>두번째 컨텐츠 내용이 들어가겠지욤</li>
+        <li>두번째 컨텐츠 내용이 들어가겠지욤</li>
+      </ul>
+    </section>
+  </section>
+
+
+  <script>
+
+    var doc = document;
+    var component1 = doc.getElementById('tab_component1');
+    var tab = document.querySelectorAll('.tab li');
+
+    /* 큰 탭 구현 */
+    for(var i = 0; i < tab.length; i++){
+      tab[i].onclick = function(){
+        component1.dataset.view = this.dataset.category;
+        //console.log(component1.dataset);
+        return false;
+      }
+    }
+
+    /* 탭 안에 탭 구현 */
+    var stab_component = doc.getElementById('stab_component');
+    var stab = doc.querySelectorAll('.stab li');
+    for(var s = 0; s < stab.length; s++){
+      stab[s].onclick = function(){
+        stab_component.dataset.view = this.dataset.category;
+        return false;
+      }
+    }
+
+
+
+    //$.data('.tab' , {'aaa':'bbb':'ccc'});
+  </script>
+
+
+  <style>
+    .imageGallery{
+      border:1px solid #eee;
+      margin-top:20px;
+      padding:20px;
+    }
+    .paging span{display:inline-block; width:30px; height:30px; line-height:30px; border-radius:8px; background:#eee; text-align:center;}
+    .visual_img li{display:none;}
+
+    /* with script */
+    .imageGallery[data-index="0"] .v_01,
+    .imageGallery[data-index="1"] .v_02,
+    .imageGallery[data-index="2"] .v_03,
+    .imageGallery[data-index="3"] .v_04{
+      display:block;
+    }
+  </style>
+
+
+  <section class="imageGallery" id="gallery" data-index="0">
+    <h2>이미지 갤러리</h2>
+    <p class="paging">
+      <span data-index="0"><a href="">1</a></span>
+      <span data-index="1"><a href="">2</a></span>
+      <span data-index="2"><a href="">3</a></span>
+      <span data-index="3"><a href="">4</a></span>
+    </p>
+    <ul class="visual_img">
+      <li class="v_01">1번 비주얼</li>
+      <li class="v_02">2번 비주얼</li>
+      <li class="v_03">3번 비주얼</li>
+      <li class="v_04">4번 비주얼</li>
+    </ul>
+
+  </section>
+
+
+  <script>
+    var doc = document;
+    var gallery = doc.getElementById('gallery');
+    var dot_select = doc.querySelectorAll('.paging span');
+    for(var j = 0; j < dot_select.length; j++){
+      dot_select[j].onclick = function(){
+        gallery.dataset.index = this.dataset.index;
+        return false;
+      }
+    }
+  </script>
+
+</body>
 </html>
