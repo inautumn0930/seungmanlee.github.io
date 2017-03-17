@@ -1,237 +1,336 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<meta charset="utf-8">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WB88SKB');</script>
-  <!-- End Google Tag Manager -->
-
-    <title>seungman's page   스트립트 테스트</title>
-
+	<!-- Google Tag Manager -->
+	  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	  })(window,document,'script','dataLayer','GTM-WB88SKB');</script>
+	  <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
-  		  		<style>
-  			body{padding:20px; margin:0;}
-  			h1{font-size:1em;}
-  			ul li{list-style:none;}
-  			.a_wrapper{border:1px solid #eee;}
-  			.tab:after{content:""; display:block; clear:both;}
-  			.tab li{
-  				float:left;
-  				width:100px;
-  				height:50px;
-  				line-height:50px;
-  				background:#eee;
-  				text-align:center;
-  				margin-right:10px;
-  			}
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-  			.tab01_contents{
-  				margin:30px;
-  				border:1px dotted #ccc;
-  				padding:20px;
-  				display:none;
-  			}
-  			.stab:after{content:""; display:block; clear:both;}
-  			.stab li{
-  				float:left;
-  				width:130px;
-  				height:50px;
-  				line-height:50px;
-  				background:#eee;
-  				text-align:center;
-  				margin-right:10px;
-  			}
+    <meta property="og:title" content="윈벤션 즐기고! 지리고! 렛잇고!">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="윈벤션에서 다양한 영상과 이벤트를 즐기세요!">
+    <meta property="fb:app_id" content="1710955319233406" />
+    <meta property="og:image" content="">
+    <title>영상브릿지</title>
+    <link rel="stylesheet" href="/html/004/css/reset.css">
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" src="/html/004/js/jquery-3.1.1.min.js"></script>
 
-  			.sTabArea{
-  				display:none;
-  			}
+    <script>
+        /** 2017-03-09.analytics */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  			/* with script */
-  			.a_wrapper[data-view="A"] .aType,
-  			.a_wrapper[data-view="B"] .bType{
-  				display:block;
-  			}
-
-  			.a_wrapper[data-view="A"] li[data-category="A"],
-  			.a_wrapper[data-view="B"] li[data-category="B"]{
-  				background : #ddd;
-  			}
-
-  			.a_wrapper .aType[data-view="AA"] .stabA,
-  			.a_wrapper .aType[data-view="BB"] .stabB,
-  			.a_wrapper .aType[data-view="CC"] .stabC{
-  				display:block;
-  			}
-
-  			.a_wrapper .aType[data-view="AA"] li[data-category="AA"],
-  			.a_wrapper .aType[data-view="BB"] li[data-category="BB"],
-  			.a_wrapper .aType[data-view="CC"] li[data-category="CC"]{
-  				background : #ddd;
-  			}
-
-  		</style>
-
-
+        ga('create', 'UA-74765294-16', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB88SKB"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB88SKB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-  <h1>data set 설정으로 탭 스크립트를 간단하게 구현하는 방법</h1>
+<section>
+    <div class="body_container">
+        <a href="http://winvention.co.kr" target="_blank" class="pg_bi"><span>윈벤션</span></a>
+        <h1 class="pg_title">즐기고 지리고 렛잇고 </h1>
+        <p class="pg_title02">유행에 뒤쳐지면 쓰나!<br>윈벤션에서 내가 찾던 다양한 영상을 즐기자</p>
 
-  <!-- 전체 섹션 -->
-  <section class="a_wrapper" id="tab_component1" data-view="A" data-product="prd0" data-index="0">
-    <h2>탭 선택</h2>
-    <div>
-      <ul class="tab ttpgaclass">
-        <li data-category="A"><a href="">탭선택 01</a></li>
-        <li data-category="B"><a href="">탭선택 02</a></li>
-      </ul>
+        <section class="tab_container_area" id="tab_component" data-view="d_game" data-product="prd0" data-index="0">
+            <div class="tabarea">
+                <ul class="tablist">
+                    <li class="on" data-category="d_game"  data-index="0"><a href="">게임</a></li>
+                    <li data-category="d_humor" data-index="1"><a href="">유머</a></li>
+                    <li data-category="d_music" data-index="2"><a href="">뮤직</a></li>
+                    <li data-category="d_review" data-index="3"><a href="">리뷰</a></li>
+                    <li data-category="d_webdrama" data-index="3"><a href="">웹드라마</a></li>
+                </ul>
+            </div>
+
+            <!-- s :: 게임 -->
+            <article>
+                <div class="game">
+                    <h3 class="pg_stitle">GAME</h3>
+                    <p class="pg_scon">더 많은 게임영상과 함께라면 이제 나도 챌린저!</p>
+
+                    <div class="video_area">
+                        <ul class="video_list">
+                            <li>
+                                <button type="button" class="btn_player">영상보기</button>
+                                <img src="/html/004/images/game_visual01.png" alt="게임코치-네쓰챔-이즈리얼">
+                                <video controls >
+                                    <source src="/html/004/movie/game/game_01.m4v" type="video/mp4">
+                                </video>
+                            </li>
+                            <li>
+                                <button type="button" class="btn_player">영상보기</button>
+                                <img src="/html/004/images/game_visual02.png" alt="게임코치-네쓰챔-렝가">
+                                <video controls >
+                                    <source src="/html/004/movie/game/game_03.m4v" type="video/mp4">
+                                </video>
+                            </li>
+                            <li>
+                                <button type="button"  class="btn_player">영상보기</button>
+                                <img src="/html/004/images/game_visual03.png" alt="게임토치-코딘치-오리와 눈 먼숲">
+                                <video controls >
+                                    <source src="/html/004/movie/game/game_02.m4v" type="video/mp4">
+                                </video>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <footer class="footerarea">
+                        <strong class="footer_st"><span>윈벤션 앱</span> 다운받고!</strong>
+                        <p>다양한 영상들을 즐기고!! 다양한 이벤트도 참여하고!!!</p>
+                        <div class="footer_btn_area">
+                            <a href="" onclick="window.open('https://ref.ad-brix.com/v1/referrallink?ak=554843330&ck=9186472&sub_referral=1225984'); return false;">구글플레이</a>
+                            <a href="" onclick="window.open('https://ref.ad-brix.com/v1/referrallink?ak=105655544&ck=9540470&sub_referral=593035'); return false;">앱스토어</a>
+                        </div>
+                    </footer>
+                </div>
+            </article>
+            <!-- e :: 게임 -->
+
+
+            <!-- s :: 유머 -->
+            <article>
+                <div class="humor">
+                    <h3 class="pg_stitle">HUMOR</h3>
+                    <p class="pg_scon">지치는 하루. 전환점이 필요해!</p>
+
+                    <div class="video_area">
+                        <ul class="video_list">
+                            <li>
+                                <button type="button" class="btn_player">영상보기</button>
+                                <img src="/html/004/images/humor_visual01.png" alt="poptime-남자들만 이해하는 상황">
+                                <video controls >
+                                    <source src="/html/004/movie/humor/humor_01.m4v" type="video/mp4">
+                                </video>
+                            </li>
+                            <li>
+                                <button type="button" class="btn_player on">영상보기</button>
+                                <img src="/html/004/images/humor_visual02.png" alt="poptime-대학교 여자 선배 유형">
+                                <video controls >
+                                    <source src="/html/004/movie/humor/humor_02.m4v" type="video/mp4">
+                                </video>
+                            </li>
+                            <li>
+                                <button type="button"  class="btn_player on">영상보기</button>
+                                <img src="/html/004/images/humor_visual03.png" alt="네얼간이-은밀한 암흑카페체험">
+                                <video controls >
+                                    <source src="/html/004/movie/humor/humor_03.m4v" type="video/mp4">
+                                </video>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <footer class="footerarea">
+                        <strong class="footer_st"><span>윈벤션 앱</span> 다운받고!</strong>
+                        <p>다양한 영상들을 즐기고!! 다양한 이벤트도 참여하고!!!</p>
+                        <div class="footer_btn_area">
+                            <a href="" onclick="window.open('https://ref.ad-brix.com/v1/referrallink?ak=554843330&ck=9186472&sub_referral=1775654'); return false;">구글플레이</a>
+                            <a href="" onclick="window.open('https://ref.ad-brix.com/v1/referrallink?ak=105655544&ck=9540470&sub_referral=5328339'); return false;">앱스토어</a>
+                        </div>
+                    </footer>
+                </div>
+            </article>
+            <!-- e :: 유머 -->
+
+
+            <!-- s :: 뮤직 -->
+            <article>
+                <div class="music">
+                    <h3 class="pg_stitle">MUSIC</h3>
+                    <p class="pg_scon">오늘부로 입덕입덕, 다양한 엔터테인먼트 콘텐츠를 즐기자!</p>
+
+                    <div class="video_area">
+                        <ul class="video_list">
+                            <li>
+                                <button type="button" class="btn_player">영상보기</button>
+                                <img src="/html/004/images/music_visual01.png" alt="제23회 사울가요대상 exo">
+                                <video controls >
+                                    <source src="/html/004/movie/music/music_03.mp4" type="video/mp4">
+                                </video>
+                            </li>
+                            <li>
+                                <button type="button" class="btn_player">영상보기</button>
+                                <img src="/html/004/images/music_visual02.png" alt="헤이즈가 부르는 돌아오지마">
+                                <video controls >
+                                    <source src="/html/004/movie/music/music_02.m4v" type="video/mp4">
+                                </video>
+                            </li>
+                            <li>
+                                <button type="button"  class="btn_player">영상보기</button>
+                                <img src="/html/004/images/music_visual03.png" alt="mc그리 이불밖은 위험해">
+                                <video controls >
+                                    <source src="/html/004/movie/music/music_01.m4v" type="video/mp4">
+                                </video>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <footer class="footerarea">
+                        <strong class="footer_st"><span>윈벤션 앱</span> 다운받고!</strong>
+                        <p>다양한 영상들을 즐기고!! 다양한 이벤트도 참여하고!!!</p>
+                        <div class="footer_btn_area">
+                            <a href="" onclick="window.open('https://ref.ad-brix.com/v1/referrallink?ak=554843330&ck=9186472&sub_referral=6624933'); return false;">구글플레이</a>
+                            <a href="" onclick="window.open('https://ref.ad-brix.com/v1/referrallink?ak=105655544&ck=9540470&sub_referral=9891878'); return false;">앱스토어</a>
+                        </div>
+                    </footer>
+                </div>
+            </article>
+            <!-- e :: 뮤직 -->
+
+
+            <!-- s :: 리뷰 -->
+            <article>
+                <div class="review">
+                    <h3 class="pg_stitle">REVIEW</h3>
+                    <p class="pg_scon">너희들이 딱 좋아할만한 동영상만 골라놨음</p>
+
+                    <div class="video_area">
+                        <ul class="video_list">
+                            <li>
+                                <button type="button" class="btn_player">영상보기</button>
+                                <img src="/html/004/images/review_visual01.png" alt="차놀자 스캔들! 이나의 유혹">
+                                <video controls >
+                                    <source src="/html/004/movie/review/review_01.m4v" type="video/mp4">
+                                </video>
+                            </li>
+                            <li>
+                                <button type="button" class="btn_player">영상보기</button>
+                                <img src="/html/004/images/review_visual02.png" alt="촬영중단!F350짐칸에서 떡실신한 기욱">
+                                <video controls >
+                                    <source src="/html/004/movie/review/review_02.m4v" type="video/mp4">
+                                </video>
+                            </li>
+                            <li>
+                                <button type="button"  class="btn_player">영상보기</button>
+                                <img src="/html/004/images/review_visual03.png" alt="모두를 놀라게 한 자율주행시스템">
+                                <video controls >
+                                    <source src="/html/004/movie/review/review_03.m4v" type="video/mp4">
+                                </video>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <footer class="footerarea">
+                        <strong class="footer_st"><span>윈벤션 앱</span> 다운받고!</strong>
+                        <p>다양한 영상들을 즐기고!! 다양한 이벤트도 참여하고!!!</p>
+                        <div class="footer_btn_area">
+                            <a href="" onclick="window.open('https://ref.ad-brix.com/v1/referrallink?ak=554843330&ck=9186472&sub_referral=3244719'); return false;">구글플레이</a>
+                            <a href="" onclick="window.open('https://ref.ad-brix.com/v1/referrallink?ak=105655544&ck=9540470&sub_referral=6349222'); return false;">앱스토어</a>
+                        </div>
+                    </footer>
+                </div>
+            </article>
+            <!-- e :: 리뷰 -->
+
+
+            <!-- s :: 웹드라마 -->
+            <article>
+                <div class="webdrama">
+                    <h3 class="pg_stitle">MOVIE DRAMA</h3>
+                    <p class="pg_scon">내 손안의 극장. 윈벤션 오리지널 웹 드라마!</p>
+
+                    <div class="video_area">
+                        <ul class="video_list">
+                            <li>
+                                <button type="button" class="btn_player">영상보기</button>
+                                <img src="/html/004/images/drama_visual01.png" alt="웹 무비 - 눈을감다">
+                                <video controls >
+                                    <source src="/html/004/movie/web/drama_01.mp4" type="video/mp4">
+                                </video>
+                            </li>
+                            <li>
+                                <button type="button" class="btn_player">영상보기</button>
+                                <img src="/html/004/images/drama_visual02.png" alt="웹 드라마 - 러브스틱">
+                                <video controls >
+                                    <source src="/html/004/movie/web/drama_02.m4v" type="video/mp4">
+                                </video>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <footer class="footerarea">
+                        <strong class="footer_st"><span>윈벤션 앱</span> 다운받고!</strong>
+                        <p>다양한 영상들을 즐기고!! 다양한 이벤트도 참여하고!!!</p>
+                        <div class="footer_btn_area">
+                            <a href="" onclick="window.open('https://ref.ad-brix.com/v1/referrallink?ak=554843330&ck=9186472&sub_referral=2534619'); return false;">구글플레이</a>
+                            <a href="" onclick="window.open('https://ref.ad-brix.com/v1/referrallink?ak=105655544&ck=9540470&sub_referral=358604'); return false;">앱스토어</a>
+                        </div>
+                    </footer>
+                </div>
+            </article>
+            <!-- e :: 웹드라마 -->
+
+        </section>
+
     </div>
+</section>
 
-
-    <!-- A contents -->
-    <section id="stab_component" class="tab01_contents aType" data-view="AA">
-      <ul class="stab">
-        <li data-category="AA"><a href="" class="ttpgaclass">작은탭 선택01</a></li>
-        <li data-category="BB"><a href="" class="ttpgaclass">작은탭 선택02</a></li>
-        <li data-category="CC"><a href="" class="ttpgaclass">작은탭 선택03</a></li>
-      </ul>
-      <div class="sTabArea stabA">
-        <h2>탭 컨텐츠 001</h2>
-        <ul>
-          <li>내용이 들어가겠지욤</li>
-          <li>내용이 들어가겠지욤</li>
-          <li>내용이 들어가겠지욤</li>
-          <li>내용이 들어가겠지욤</li>
-        </ul>
-      </div>
-
-
-      <!-- s : 탭 01-->
-      <div class="sTabArea stabB">
-        <h2>탭 컨텐츠 002</h2>
-        <ul>
-          <li>내용이 들어가겠지욤</li>
-          <li>내용이 들어가겠지욤</li>
-          <li>내용이 들어가겠지욤</li>
-          <li>내용이 들어가겠지욤</li>
-        </ul>
-      </div>
-
-      <!-- s : 탭 01-->
-      <div class="sTabArea stabC">
-        <h2>탭 컨텐츠 003</h2>
-        <ul>
-          <li>내용이 들어가겠지욤</li>
-          <li>내용이 들어가겠지욤</li>
-          <li>내용이 들어가겠지욤</li>
-          <li>내용이 들어가겠지욤</li>
-        </ul>
-      </div>
-    </section>
-
-
-    <!-- B contents -->
-    <section class="tab01_contents bType">
-      <h2>탭 컨텐츠 02</h2>
-      <ul>
-        <li>두번째 컨텐츠 내용이 들어가겠지욤</li>
-        <li>두번째 컨텐츠 내용이 들어가겠지욤</li>
-        <li>두번째 컨텐츠 내용이 들어가겠지욤</li>
-        <li>두번째 컨텐츠 내용이 들어가겠지욤</li>
-        <li>두번째 컨텐츠 내용이 들어가겠지욤</li>
-        <li>두번째 컨텐츠 내용이 들어가겠지욤</li>
-      </ul>
-    </section>
-  </section>
-
-
-  <script>
+<script>
 
     var doc = document;
-    var component1 = doc.getElementById('tab_component1');
-    var tab = document.querySelectorAll('.tab li');
+    var tab_component = doc.getElementById('tab_component');
+    var tablist = doc.querySelectorAll('.tablist li');
+    var f_prev = 0;
+    var video_movie = doc.querySelectorAll('.video_list li');
 
-    /* 큰 탭 구현 */
-    for(var i = 0; i < tab.length; i++){
-      tab[i].onclick = function(){
-        component1.dataset.view = this.dataset.category;
-        //console.log(component1.dataset);
-        return false;
-      }
+    for(var i = 0; i < tablist.length; i++){
+
+        tablist[i].idx = i;
+        tablist[i].onclick = function(){
+
+            if(f_prev != tablist[this.idx]){
+                tablist[f_prev].className = '';
+
+                var vd_list = document.querySelectorAll('video');
+                for(var j = 0; j < vd_list.length; j++){
+                    vd_list[j].pause();
+                }
+            }
+
+            tablist[this.idx].className = 'on';
+            tab_component.dataset.view = this.dataset.category;
+            f_prev = this.idx;
+        }
     }
 
-    /* 탭 안에 탭 구현 */
-    var stab_component = doc.getElementById('stab_component');
-    var stab = doc.querySelectorAll('.stab li');
-    for(var s = 0; s < stab.length; s++){
-      stab[s].onclick = function(){
-        stab_component.dataset.view = this.dataset.category;
-        return false;
-      }
-    }
+
+    $(document).ready(function(){
+    	var footer_h = $('.footerarea').outerHeight();
+		$('.body_container').css('padding-top' , footer_h);
+
+    	
+        var imgW = $('.video_list > li > img').width();
+        var imgH = $('.video_list > li > img').height();
+
+        $('.video_list > li').width(imgW);
+        $('.video_list > li').height(imgH);
+
+        $('.video_list > li > video').width(imgW);
+        $('.video_list > li > video').height(imgH);
+
+        $('.btn_player').on('click' , function(){
+            $(this).parent().addClass('click');
+            $(this).parent().find('video')[0].play();
+        });
+
+    });
+
+</script>
 
 
-
-    //$.data('.tab' , {'aaa':'bbb':'ccc'});
-  </script>
-
-
-  <style>
-    .imageGallery{
-      border:1px solid #eee;
-      margin-top:20px;
-      padding:20px;
-    }
-    .paging span{display:inline-block; width:30px; height:30px; line-height:30px; border-radius:8px; background:#eee; text-align:center;}
-    .visual_img li{display:none;}
-
-    /* with script */
-    .imageGallery[data-index="0"] .v_01,
-    .imageGallery[data-index="1"] .v_02,
-    .imageGallery[data-index="2"] .v_03,
-    .imageGallery[data-index="3"] .v_04{
-      display:block;
-    }
-  </style>
-
-
-  <section class="imageGallery" id="gallery" data-index="0">
-    <h2>이미지 갤러리</h2>
-    <p class="paging">
-      <span data-index="0"><a href="">1</a></span>
-      <span data-index="1"><a href="">2</a></span>
-      <span data-index="2"><a href="">3</a></span>
-      <span data-index="3"><a href="">4</a></span>
-    </p>
-    <ul class="visual_img">
-      <li class="v_01">1번 비주얼</li>
-      <li class="v_02">2번 비주얼</li>
-      <li class="v_03">3번 비주얼</li>
-      <li class="v_04">4번 비주얼</li>
-    </ul>
-
-  </section>
-
-
-  <script>
-    var doc = document;
-    var gallery = doc.getElementById('gallery');
-    var dot_select = doc.querySelectorAll('.paging span');
-    for(var j = 0; j < dot_select.length; j++){
-      dot_select[j].onclick = function(){
-        gallery.dataset.index = this.dataset.index;
-        return false;
-      }
-    }
-  </script>
 
 </body>
 </html>
